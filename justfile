@@ -14,3 +14,7 @@ typecheck:
 # Run the development environment
 dev:
     poetry run uvicorn meal_plan.main:app --reload
+
+# Lint all files
+lint:
+    poetry run ruff check .
