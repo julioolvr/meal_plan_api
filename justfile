@@ -26,3 +26,7 @@ format:
 # Run all code checks
 check: typecheck lint
     poetry run black . --check
+
+# Run all tests
+test:
+    poetry run pytest . -q
