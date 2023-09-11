@@ -1,5 +1,5 @@
 default:
-  just --list
+    just --list
 
 # Setup the environment
 setup:
@@ -18,3 +18,11 @@ dev:
 # Lint all files
 lint:
     poetry run ruff check .
+
+# Autoformatting
+format:
+    poetry run black .
+
+# Run all code checks
+check: typecheck lint
+    poetry run black . --check
