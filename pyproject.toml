@@ -7,12 +7,16 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-fastapi = {extras = ["all"], version = "^0.103.1"}
+fastapi = { extras = ["all"], version = "^0.103.1" }
 ruff = "^0.0.287"
 
 
 [tool.poetry.group.dev.dependencies]
 mypy = "~1.4.0"
+
+[tool.mypy]
+disallow_any_unimported = true
+disallow_untyped_defs = true
 
 [build-system]
 requires = ["poetry-core"]
