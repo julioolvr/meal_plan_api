@@ -13,7 +13,7 @@ typecheck:
 
 # Run the development environment
 dev:
-    poetry run uvicorn meal_plan.main:app --reload
+    poetry run uvicorn meal_plan.api.main:app --reload
 
 # Lint all files
 lint:
